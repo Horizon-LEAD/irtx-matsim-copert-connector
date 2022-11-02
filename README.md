@@ -1,9 +1,5 @@
 # IRTX MATSim to COPERT connector
 
-## TODO
-
-- Test input and output data
-
 ## Introduction
 
 This model is a connector between the upstream MATSim model and the downstream
@@ -105,7 +101,7 @@ dependency in the `conda` environment) as described below:
 ```bash
 papermill "Convert.ipynb" /dev/null \
   -pconfiguration_path /path/to/configuration.json \
-  -ptrips_path /path/to/irtx-matsim/output/trips.csv \
+  -ptrips_path /path/to/trips.csv \
   -poutput_path /path/to/output/copert.xlsx \
   -pyear 2022
 ```
@@ -125,14 +121,14 @@ The following **optional** parameter is available:
 ## Standard scenarios
 
 For the Lyon living lab, a configuration file has already been prepared in
-`data/lyon_configuration.json`. It can be used to prepare COPERT data for the
+`data/configuration_lyon.json`. It can be used to prepare COPERT data for the
 three main scenarios (Baseline 2022, UCC 2022, UCC 2030) as follows:
 
 ```bash
 papermill "Convert.ipynb" /dev/null \
-  -pconfiguration_path data/lyon_configuration.json \
-  -ptrips_path /path/to/irtx-matsim/output/trips.csv \
-  -poutput_path output/copert_{scenario}.xlsx \
+  -pconfiguration_path /irtx-matsim-copert-connector/data/configuration_lyon.json \
+  -ptrips_path /irtx-matsim/output/output_{scenario}/trips.csv \
+  -poutput_path /irtx-matsim-copert-connector/output/copert_{scenario}.xlsx \
   -pyear {year}
 ```
 
