@@ -1,5 +1,12 @@
 set -e
 
+## Prepare
+cd /home/ubuntu/irtx-matsim-copert-connector
+mkdir /home/ubuntu/irtx-matsim-copert-connector/output
+
+## Create environment
+conda env create -f environment.yml -n matsim2copert
+
 ## Activate environment
 conda activate matsim2copert
 
