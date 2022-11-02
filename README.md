@@ -92,7 +92,7 @@ correspond to the sampling rate of the MATSim simulation. The relevant KPIs like
 distance and vehicle count is scaled accordingly by the inverse of the sampling
 rate.
 
-# Running the model
+## Running the model
 
 The model is defined in a Jupyter notebook called `Convert.ipynb`. To run it,
 call it through the `papermill` command line utility (which is installed as a
@@ -116,6 +116,8 @@ Parameter             | Values                            | Description
 
 The following **optional** parameter is available:
 
+Parameter             | Values                            | Description
+---                   | ---                               | ---
 `year`     | Integer (default `2022`)                     | Year for which the information is written in the COPERT file
 
 ## Standard scenarios
