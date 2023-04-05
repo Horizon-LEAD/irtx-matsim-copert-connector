@@ -13,13 +13,13 @@ function show_usage () {
 }
 
 function show_help () {
-    echo -e "${BOLD}eentrypoint.sh${NORM}: Runs the Connector from matsim-irtx to copert"\\n
+    echo -e "${BOLD}entrypoint.sh${NORM}: Runs the Connector from matsim-irtx to copert"\\n
     show_usage
     echo -e "\n${BOLD}Required arguments:${NORM}"
     echo -e "${REV}CONF_FILE${NORM}\t the configuration json file"
     echo -e "${REV}TRIPS${NORM}\t trips csv file originated by matsim model"
     echo -e "${REV}YEAR${NORM}\t the year to be used"
-    echo -e "${REV}OUT_PATH${NORM}\t the output path"
+    echo -e "${REV}OUT_PATH${NORM}\t the output path"\\n
     echo -e "${BOLD}Optional arguments:${NORM}"
     echo -e "${REV}-v${NORM}\tSets verbosity level"
     echo -e "${REV}-h${NORM}\tShows this message"
@@ -68,7 +68,6 @@ OUT_PATH=${leftovers[3]}
 if [ ! -f "${CONF_FILE}" ]; then
      echo -e "Give a ${BOLD}valid${NORM} path to the conversion configuration file\n"; show_usage; exit 1
 fi
-
 if [ ! -f "${TRIPS}" ]; then
     echo -e "Give a ${BOLD}valid${NORM} Path to the trips file originated by matsim model\n"; show_usage; exit 1
 fi

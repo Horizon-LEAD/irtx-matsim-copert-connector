@@ -3,10 +3,7 @@
     "description":"This model is a connector between the upstream MATSim model and the downstream COPERT model for emissions analysis.",
     "version": "1.0.0",
     "status":"draft",
-    "types": [
-        {"name": "Connector", "description":"Description"}
-    ],
-    "dockerImage":"egistry.gitlab.com/inlecom/lead/models/matsim-2-copert:latest",
+    "dockerImage":"registry.gitlab.com/inlecom/lead/models/matsim-irtx-2-copert:latest",
     "url": "https://github.com/Horizon-LEAD/irtx-matsim-copert-connector",
     "modelData":  [
         {
@@ -49,8 +46,8 @@
             "inputType": "CLI",
             "chartType": "NONE",
             "modelDataType": {
-                "name": "int",
-                "dataType": "int"
+                "name": "number",
+                "dataType": "number"
             }
         },
         {
